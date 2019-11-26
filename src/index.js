@@ -24,7 +24,8 @@ router.get('/access-token', accessTokenController.middlewareOpenToken, accessTok
 
 // api/users
 const usersControler = require('./controllers/users.controller');
-router.get('/users', accessTokenController.middlewareOpenToken, usersControler.requestGetUser);
+router.get('/users', accessTokenController.middlewareOpenToken, usersControler.requestGetUsers);
+router.get('/users/:userId', accessTokenController.middlewareOpenToken, usersControler.requestGetUser);
 
 const port = 3000;
 
